@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+        body {
+  font-family: Tahoma, sans-serif;
+}
+        table {
+          border-collapse: separate;
+          width: 100%;
+        }
+        
+        th, td {
+          border-bottom: 1px solid rgb(249, 198, 143);
+          padding: 8px;
+          text-align: left;
+        }
+        
+        tr:hover {background-color: rgb(249, 198, 143);}
+        </style>
+</head>
+<body>
+
+    <h1>Datos de Familiares</h1>
+
+    <table>
+        <tr>
+            <th scope = "col">Nombre</th>
+            <th scope = "col">Apellido</th>
+            <th scope = "col">Fecha de nacimiento</th>
+            <th scope = "col">Edad</th>
+        {% for miembro in listado_familiares %}
+            <tr>
+            {% for x in miembro %}
+                <td>{{x}}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+      </table>
+
+</body>
+</html>
